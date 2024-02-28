@@ -1,32 +1,81 @@
-let nome = prompt("Qual é seu nome?");
-let peso = prompt("Quanto você pesa?");
-let altura = prompt("Quanto você mede?");
+const prompt = require("prompt-sync")();
 
-parseFloat(peso);
-parseFloat(altura);
+function getUserInfo(){
+    let weight = prompt("Digite seu peso");
+    let height = prompt("Digite sua altura");
 
-function contas(){
-    let IMC = peso/(altura*altura);
-    return IMC.toFixed(1);
+    return pessoa = {
+        peso: weight,
+        altura: height
+    };
+};
+
+function userData(){
+    
 }
 
-alert(`${nome}, seu IMC é ` + contas());
+function calcImc(pesoInformado,alturaInformado){
 
-if(contas()<=18.5){
-    alert("Você está abaixo do peso")
-}
-else if(contas()<=24.9){
-    alert("Você está no peso ideial")
-}
-else if(contas()<=29.9){
-    alert("Você está no levemente acima do peso")
-}
-else if(contas()<=34.9){
-    alert("Você está com obesidade nível 1")
-}
-else if(contas()<=39.9){
-    alert("Você está com obesidade nível 2")
-}
-else if(contas()<=40){
-    alert("Você está com obesidade nível 3")
-}
+    return pesoInformado / alturaInformado**2;
+};
+
+function check(){
+    let userData = getUserInfo();
+    let peso = userData.peso;
+    let altura = userData.altura;
+    let resultImc = calcImc(peso,altura);
+    let level;
+
+    if(resultImc<=18.5){
+       level = "Você está abaixo do peso";
+    }
+    else if(resultImc<=24.9){
+        level = "Você está no peso ideial";
+    }
+    else if(resultImc<=29.9){
+        level = "Você está no levemente acima do peso";
+    }
+    else if(resultImc<=34.9){
+        level = "Você está com obesidade nível 1";
+    }
+    else if(resultImc<=39.9){
+        level = "Você está com obesidade nível 2";
+    }
+    else if(resultImc<=40){
+        level = "Você está com obesidade nível 3";
+    }
+
+    return level;
+};
+
+function main(){
+    let userData = getUserInfo();
+    let peso = userData.peso;
+    let altura = userData.altura;
+    let resultImc = calcImc(peso,altura);
+    let nivelObesidade = check(peso,altura);
+
+    function check(){
+        if(resultImc<=18.5){
+           return "Você está abaixo do peso";
+        }
+        else if(resultImc<=24.9){
+            return "Você está no peso ideial";
+        }
+        else if(resultImc<=29.9){
+            return "Você está no levemente acima do peso";
+        }
+        else if(resultImc<=34.9){
+            return "Você está com obesidade nível 1";
+        }
+        else if(resultImc<=39.9){
+            return "Você está com obesidade nível 2";
+        }
+        else if(resultImc<=40){
+            return "Você está com obesidade nível 3";
+        }
+    };
+    console.log(`Seu IMC é ${resultadoImc.toFixed(1)}. ${nivelObesidade}`)
+};
+
+main();
