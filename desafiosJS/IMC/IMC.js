@@ -10,42 +10,9 @@ function getUserInfo(){
     };
 };
 
-function userData(){
-    
-}
-
 function calcImc(pesoInformado,alturaInformado){
 
     return pesoInformado / alturaInformado**2;
-};
-
-function check(){
-    let userData = getUserInfo();
-    let peso = userData.peso;
-    let altura = userData.altura;
-    let resultImc = calcImc(peso,altura);
-    let level;
-
-    if(resultImc<=18.5){
-       level = "Você está abaixo do peso";
-    }
-    else if(resultImc<=24.9){
-        level = "Você está no peso ideial";
-    }
-    else if(resultImc<=29.9){
-        level = "Você está no levemente acima do peso";
-    }
-    else if(resultImc<=34.9){
-        level = "Você está com obesidade nível 1";
-    }
-    else if(resultImc<=39.9){
-        level = "Você está com obesidade nível 2";
-    }
-    else if(resultImc<=40){
-        level = "Você está com obesidade nível 3";
-    }
-
-    return level;
 };
 
 function main(){
@@ -75,7 +42,7 @@ function main(){
             return "Você está com obesidade nível 3";
         }
     };
-    console.log(`Seu IMC é ${resultadoImc.toFixed(1)}. ${nivelObesidade}`)
+    console.log(`Seu IMC é ${resultImc.toFixed(1)}. ${nivelObesidade}`)
 };
 
 main();
