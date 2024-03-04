@@ -5,25 +5,19 @@ function getInfo(){
     return speed;
 };
 
-function main(){
-    let speed = getInfo();
-    let final = payTicket(speed);
-
-    function payTicket(speed){
-        if(speed>60){
-            let ultrapassou = speed-60;
-            return ultrapassou*100;
-        }
-        else{
-            return "Você está dentro do limite de velocidade";
-        }
-    };
-    if(final === "Você está dentro do limite de velocidade"){
-        console.log(final);
+function payTicket(speed){
+    if(speed>60){
+        let ultrapassou = speed-60;
+        let final = ultrapassou*100;
+        return console.log(`Você terá que pagar R$${final}`);
     }
     else{
-        console.log(`A multa que você precisa pagar é: ${final}`);    
-    };
+        return "Você está dentro do limite de velocidade";
+    }
+}
+function main(){
+    let speed = getInfo();
+    payTicket(speed);
 };
 
 main();

@@ -5,19 +5,19 @@ function bookQuantity(){
     return quantity
 };
 
+function total(quantity){
+    if(quantity >= 7){
+        let valorTotal = quantity*15;
+        return console.log(`Você terá que pagar R$${valorTotal}`);
+    }
+    else{
+        let valorTotal = quantity*22;
+        return console.log(`Você terá que pagar R$${valorTotal}`);
+    };
+};
+
 function main(){
     let quantity = bookQuantity();
-    let pay = total(quantity);
-
-    function total(quantity){
-        if(quantity => 7){
-            return quantity*15;
-        }
-        else{
-            return quantity*22;
-        };
-    };
-
-    console.log(`O total da sua compra é ${pay}`);
+    total(quantity);
 };
 main();
