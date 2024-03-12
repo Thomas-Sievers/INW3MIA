@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+p{
+    color: white;   
+}
+
+h1{
+    color: white
+}
+
+header{
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(40, 40, 40);
+}
+
+#apresentacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-evenly;
+}
+
+#texto_apresentacao{
+    width: 30%;
+}
+
+#cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards img{
+    width: 10%;
+    height: auto;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+form label{
+    color: white
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    background-color: rgb(40, 40, 40);
+    align-content: center;
+    justify-content: space-between;
+}
