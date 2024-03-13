@@ -19,7 +19,7 @@ header{
     background-color: rgb(40, 40, 40);
 }
 
-#apresentacao{
+.apresentacao{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +27,7 @@ header{
     justify-content: space-evenly;
 }
 
-#texto_apresentacao{
+.texto_apresentacao{
     width: 30%;
 }
 

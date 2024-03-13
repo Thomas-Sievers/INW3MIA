@@ -16,13 +16,13 @@ const main = () => {
 
     function apresentacao(){
         let apresentacao = document.createElement('div');
-        apresentacao.setAttribute('id', 'apresentacao');
+        apresentacao.classList.add('apresentacao')
 
         let kaneto_foto = document.createElement('img');
         kaneto_foto.src = 'img/Screen Shot 2024-03-09 at 7.04.34 PM.png'
 
         let texto_apresentacao = document.createElement('div');
-        apresentacao.setAttribute('id', 'texto_apresentacao'); 
+        texto_apresentacao.classList.add('texto_apresentacao')
         //Perguntar para o professor pq o CSS nao ta funfando
        
         let kaneto_texto = document.createElement('p');
@@ -93,11 +93,11 @@ const main = () => {
         celular.innerHTML = 'Celular: ';
 
         let input_celular = document.createElement('input');
-        input_celular.setAttribute('type', 'celular');
         input_celular.setAttribute('id', 'celular');
+        input_celular.setAttribute('type', 'text');
 
         let submit = document.createElement('input');
-        input_celular.setAttribute('type', 'submit'); //Perguntar pq ele foi pra cima
+        submit.setAttribute('type', 'submit'); //Perguntar pq ele foi pra cima
 
         main.append(form);
         form.append(texto_form);
