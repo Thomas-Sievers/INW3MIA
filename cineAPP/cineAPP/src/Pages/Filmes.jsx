@@ -1,5 +1,12 @@
+import data from '../../artigos.json';
+
 function Filmes() {
-    return ( <h1>Filmes</h1> );
-}
+    console.log(data);
+    return (
+    <>
+        <h1>Filmes</h1>
+    </> 
+    );
+};
 
 export default Filmes;
