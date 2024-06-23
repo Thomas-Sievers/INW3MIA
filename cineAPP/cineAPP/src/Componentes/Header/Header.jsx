@@ -2,10 +2,10 @@ import Navbar from "../Navbar/Navbar";
 
 function Header() {
     return (
-        <header className="flex bg-primary-thompson text-white p-4 mb-4 justify-between">
-            <span>Olá visitante!</span>
-            <h1>Bem-vindo ao CineAPP</h1>
+        <header className="flex items-center bg-navbar text-white p-4 mb-4 justify-between">
+            <img className="w-10 h-10" src="netflix.png" alt="" />
             <Navbar/>
+            <img className="w-10 h-10" src="lupa.png" alt="" />
         </header>
     );
 }

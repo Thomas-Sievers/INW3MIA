@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        'primary-thompson': '#034562'
+        'fundo-escuro': '#111A17',
+        'navbar': '#244235'
       }
     },
   },
