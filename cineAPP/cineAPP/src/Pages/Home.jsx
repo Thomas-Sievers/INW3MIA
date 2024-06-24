@@ -55,7 +55,7 @@ function Home() {
                             <div className="w-full m-4">
                                 <h2 className="underline mb-5">{filme.title}</h2>
                                 <p>{filme.text}</p>
-                                <Link className='bg-navbar text-white w-full' onClick={()=> moreDetail(filme)}>Leia mais</Link>
+                                <Link className='block text-center m-4 rounded-md bg-navbar text-white w-full' onClick={()=> moreDetail(filme)}>Leia mais</Link>
                             </div>
                         </div>
                         </>
