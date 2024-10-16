@@ -4,6 +4,7 @@ import MainContent from "./components/MainContent"
 import Container from "./components/Container"
 import CardSideBar from "./components/CardSideBar"
 import { useEffect, useState } from "react"
+import artista from "../server/Models/Artista"
 
 function App() {
 
@@ -28,17 +29,17 @@ function App() {
           <CardSideBar/>
         </SideBar>
         <MainContent>
-
-          {
-            artistas.map( artistas => (           
-            <div className="bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
-              <p>{artistas.name}</p>
-              <div className="bg-green-400 w-3/4 h-7"></div>
-            </div>
-            ))
-          }
-
-
+          <>
+            <h1>Rock</h1>
+            {artistas
+              .filter ( artista => artista.genero.includes("rock indie"))
+              .map( artista => (
+                <div className=" bg-red-500 w-28 h-28 flex flex-col justify-around items-center">
+                  <h1>{artista.name}</h1>
+                </div>
+              ))
+            }
+          </>
         </MainContent>
       </Container>
     </>
